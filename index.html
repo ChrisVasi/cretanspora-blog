@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CretanSpora Blog</title>
+  <meta name="description" content="Blog της CretanSpora – ελαιόλαδο, κρασί & γνώση από το χωράφι." />
+  <link rel="stylesheet" href="/assets/css/blog.css" />
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>CretanSpora Blog</h1>
+    <p>Γνώση από το χωράφι — αμπέλι, ελιά, κρασί, λάδι, terroir.</p>
+
+    <div class="hero-badges" aria-label="Κατάσταση προϊόντων">
+      <span class="badge badge-3">Ελαιόλαδο 250ml: Διαθέσιμο</span>
+      <span class="badge badge-3">White / Rosé: πριν την εμφιάλωση</span>
+      <span class="badge badge-3">Experiences: σύντομα</span>
+    </div>
+
+    <p class="small">Για συνεργασίες/διαθεσιμότητα: <a href="mailto:sitejetprojects@gmail.com">sitejetprojects@gmail.com</a></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section aria-label="Ελαιόλαδο">
+    <div class="section-head">
+      <h2>Ελαιόλαδο</h2>
+      <p>Διαθέσιμο τώρα & πρακτική γνώση.</p>
+    </div>
+    <div class="cards" id="sec-oil"></div>
+  </section>
+
+  <section aria-label="Κρασί">
+    <div class="section-head">
+      <h2>Κρασί</h2>
+      <p>CretanSpora White & Rosé — σε τελικό στάδιο πριν την εμφιάλωση.</p>
+    </div>
+    <div class="cards" id="sec-wine"></div>
+  </section>
+
+  <section aria-label="Καλλιέργεια και Terroir">
+    <div class="section-head">
+      <h2>Καλλιέργεια & Terroir</h2>
+      <p>Απλές αρχές από το χωράφι.</p>
+    </div>
+    <div class="cards" id="sec-farm"></div>
+  </section>
+
+  <section aria-label="Experiences">
+    <div class="section-head">
+      <h2>Experiences</h2>
+      <p>Σύντομα.</p>
+    </div>
+    <div class="cards" id="sec-exp"></div>
+  </section>
+</main>
+
+<script src="/data/posts.js"></script>
+<script>
+  const posts = (window.CS_POSTS || []).slice()
+    .filter(p => (p.lang || "el") === "el")
+    .sort((a,b) => (a.date < b.date ? 1 : -1));
+
+  const statusLabel = (s) => ({
+    available: "Διαθέσιμο",
+    in_preparation: "Πριν την εμφιάλωση",
+    coming_soon: "Σύντομα",
+    info: "Εκπαιδευτικό"
+  }[s] || "");
+
+  const cardHTML = (p) => `
+    <article class="card">
+      <div class="meta">
+        <span class="badge">${p.category}</span>
+        ${p.product ? `<span class="badge badge-2">${p.product}</span>` : ""}
+        ${p.status ? `<span class="badge badge-3">${statusLabel(p.status)}</span>` : ""}
+      </div>
+      <h3><a href="${p.url}">${p.title}</a></h3>
+      <p>${p.excerpt}</p>
+      <div class="tags">
+        ${(p.tags || []).slice(0,4).map(t => `<span class="tag">${t}</span>`).join("")}
+      </div>
+    </article>
+  `;
+
+  const mount = (id, arr, limit=3) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = arr.slice(0,limit).map(cardHTML).join("");
+  };
+
+  const oil = posts.filter(p => p.category === "Ελαιόλαδο");
+  const wine = posts.filter(p => p.category === "Κρασί");
+  const farm = posts.filter(p => p.category === "Καλλιέργεια" || p.category === "Terroir");
+  const exp = posts.filter(p => p.category === "Εμπειρίες");
+
+  mount("sec-oil", oil, 3);
+  mount("sec-wine", wine, 3);
+  mount("sec-farm", farm, 3);
+  mount("sec-exp", exp, 1);
+</script>
+
+</body>
+</html>
