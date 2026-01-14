@@ -33,6 +33,18 @@ window.CS_POSTS = [
     lang: "el"
   },
   {
+  title: "Άρθρο 1",
+  date: "2026-01-14",
+  category: "Εμπειρίες",
+  product: "",
+  status: "info",
+  excerpt: "Μια σύντομη περιγραφή του άρθρου.",
+  url: "posts/arthro-1.html",
+  tags: ["CretanSpora"],
+  lang: "el"
+},
+
+  {
     title: "CretanSpora Experiences — σύντομα",
     date: "2026-01-11",
     category: "Εμπειρίες",
