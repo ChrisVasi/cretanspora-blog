@@ -1,44 +1,46 @@
 window.CS_POSTS = [
   {
-    title: "Ελαιόλαδο CretanSpora 250ml",
-    excerpt: "Διαθέσιμο τώρα – πρακτική γνώση & ποιοτικό προϊόν.",
+    title: "Ελαιόλαδο 250ml — διαθέσιμο τώρα",
+    date: "2026-01-14",
     category: "Ελαιόλαδο",
     product: "CretanSpora",
     status: "available",
-    date: "2026-01-10",
-    url: "#",
-    lang: "el",
-    tags: ["ελαιόλαδο", "παραγωγή"]
+    excerpt: "Το πρώτο τυποποιημένο μας ελαιόλαδο σε 250ml. Καθαρό, φρέσκο, για καθημερινή χρήση & δώρο.",
+    url: "posts/elaiolado-250ml.html",
+    tags: ["ελαιόλαδο", "250ml", "Κρήτη"],
+    lang: "el"
   },
   {
-    title: "CretanSpora White & Rosé",
-    excerpt: "Σε τελικό στάδιο πριν την εμφιάλωση.",
+    title: "CretanSpora White & Rosé — πριν την εμφιάλωση",
+    date: "2026-01-13",
     category: "Κρασί",
-    product: "White / Rosé",
+    product: "CretanSpora White / Rosé",
     status: "in_preparation",
-    date: "2026-01-05",
-    url: "#",
-    lang: "el",
-    tags: ["κρασί", "αμπέλι"]
+    excerpt: "Τα κρασιά μας είναι σε τελικό στάδιο πριν την εμφιάλωση. Σύντομα περισσότερα για ποικιλίες & χαρακτήρα.",
+    url: "posts/wines-coming-soon.html",
+    tags: ["κρασί", "Malvasia Aromatica", "Moschato Spinas", "Grenache"],
+    lang: "el"
   },
   {
-    title: "Καλλιέργεια & Terroir στην Κρήτη",
-    excerpt: "Απλές αρχές από το χωράφι.",
+    title: "Καλλιέργεια & terroir — γνώσεις από το χωράφι",
+    date: "2026-01-12",
     category: "Καλλιέργεια",
+    product: "",
     status: "info",
-    date: "2025-12-20",
-    url: "#",
-    lang: "el",
-    tags: ["terroir", "καλλιέργεια"]
+    excerpt: "Αρχές καλλιέργειας για αμπέλι & ελιά στην Κρήτη: παρατήρηση, εποχικότητα και σωστές επεμβάσεις.",
+    url: "posts/kalliergeia-terroir.html",
+    tags: ["καλλιέργεια", "terroir", "αμπέλι", "ελιά"],
+    lang: "el"
   },
   {
-    title: "CretanSpora Experiences",
-    excerpt: "Αγροτουριστικές εμπειρίες – σύντομα.",
+    title: "CretanSpora Experiences — σύντομα",
+    date: "2026-01-11",
     category: "Εμπειρίες",
+    product: "CretanSpora Experiences",
     status: "coming_soon",
-    date: "2026-02-01",
-    url: "#",
-    lang: "el",
-    tags: ["experiences"]
+    excerpt: "Ξεναγήσεις & εμπειρίες γύρω από αμπέλι, ελαιώνα και γη. Έρχεται πρόγραμμα.",
+    url: "posts/experiences.html",
+    tags: ["experiences", "Κρήτη", "αγροτουρισμός"],
+    lang: "el"
   }
 ];
