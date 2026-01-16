@@ -81,7 +81,7 @@
       <h3><a href="${p.url}">${p.title}</a></h3>
       <p>${p.excerpt}</p>
       <div class="tags">
-        ${(p.tags || []).slice(0,4).map(t => `<span class="tag">${t}</span>`).join("·")}
+        ${(p.tags || []).slice(0,4).map(t => `<span class="tag">${t}</span>`).join(" · ")}
       </div>
     </article>
   `;
